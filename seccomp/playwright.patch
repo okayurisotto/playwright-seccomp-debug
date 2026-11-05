@@ -1,0 +1,20 @@
+@@ -97,6 +97,7 @@
+ 				"epoll_ctl",
+ 				"epoll_ctl_old",
+ 				"epoll_pwait",
++				"epoll_pwait2",
+ 				"epoll_wait",
+ 				"epoll_wait_old",
+ 				"eventfd",
+@@ -826,6 +826,11 @@
+ 				]
+ 			},
+ 			"excludes": {}
++		},
++		{
++			"names": ["clone3"],
++			"action": "SCMP_ACT_ERRNO",
++			"errnoRet": 38
+ 		}
+ 	]
+ }

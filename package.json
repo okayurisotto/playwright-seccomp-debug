@@ -1,0 +1,12 @@
+{
+  "name": "docker-seccomp-debug",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "playwright": "1.64.1"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}

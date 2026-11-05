@@ -1,0 +1,8 @@
+.dockerignore
+.git
+Dockerfile
+README.md
+compose.with-security_opt.yaml
+compose.without-security_opt.yaml
+seccomp
+test.sh

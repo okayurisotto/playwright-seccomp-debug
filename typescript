@@ -1,0 +1,843 @@
+Script started on 2026-11-06 00:14:18+09:00 [COMMAND="bash ./test.sh" TERM="tmux-256color" TTY="/dev/pts/2" COLUMNS="180" LINES="46"]
+1. Docker without - /bin/true
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-ffa0acd2e7f1 [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25h2. Docker without - bun run index.ts
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-ea9bda40e4b6 [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25hBun is ok.
+Playwright is ok.
+[0m[1m59158 |[0m   }
+[0m[1m59159 |[0m   [0m[35mlet[0m e[0m[2m;[0m
+[0m[1m59160 |[0m   [0m[35mif[0m (error.error.name === [0m[32m"TimeoutError"[0m)
+[0m[1m59161 |[0m     e = [0m[35mnew[0m [0m[1mTimeoutError2[0m(error.error.message)[0m[2m;[0m
+[0m[1m59162 |[0m   [0m[35melse[0m [0m[35mif[0m (error.error.name === [0m[32m"TargetClosedError"[0m)
+[0m[1m59163 |[0m     e = [0m[35mnew[0m [0m[1mTargetClosedError2[0m(error.error.message)[0m[2m;[0m
+                    [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mlaunch: Target page, context or browser has been closed
+Browser logs:
+Chromium sandboxing failed!
+================================
+To avoid the sandboxing issue, do either of the following:
+  - (preferred): Configure your environment to support sandboxing
+  - (alternative): Launch Chromium without sandbox using 'chromiumSandbox: false' option
+================================
+
+Call log:
+[2m  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-BmGZy7 --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=18[22m
+[2m  - [pid=18][err] [1105/151419.471893:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.[22m
+[2m  - [pid=18] <gracefully close start>[22m
+[2m  - [pid=18] <kill>[22m
+[2m  - [pid=18] <will force kill>[22m
+[2m  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>[22m
+[2m  - [pid=18] starting temporary directories cleanup[22m
+[2m  - [pid=18] finished temporary directories cleanup[22m
+[2m  - [pid=18] <gracefully close end>[22m
+[0m
+ log[0m[2m:[0m [ [0m[32m"  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-BmGZy7 --remote-debugging-pipe --no-startup-window"[0m[0m[0m[2m,[0m
+  [0m[32m"  - <launched> pid=18"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18][err] [1105/151419.471893:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox."[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <gracefully close start>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <kill>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <will force kill>"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] starting temporary directories cleanup"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] finished temporary directories cleanup"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <gracefully close end>"[0m[0m
+][0m[2m,[0m
+
+[0m      [2mat [0m[0m[36m[2m/app/[0m[36mnode_modules/playwright-core/lib/coreBundle.js[0m[2m:[0m[33m59163[0m[2m:[33m13[0m
+[0m
+[2mBun v1.4.4 (Linux x64)[0m
+
+3. Docker with - /bin/true
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-cc35b11a460c [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25h4. Docker with - bun run index.ts
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-ed15818991e2 [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25hBun is ok.
+Playwright is ok.
+[0m[1m59158 |[0m   }
+[0m[1m59159 |[0m   [0m[35mlet[0m e[0m[2m;[0m
+[0m[1m59160 |[0m   [0m[35mif[0m (error.error.name === [0m[32m"TimeoutError"[0m)
+[0m[1m59161 |[0m     e = [0m[35mnew[0m [0m[1mTimeoutError2[0m(error.error.message)[0m[2m;[0m
+[0m[1m59162 |[0m   [0m[35melse[0m [0m[35mif[0m (error.error.name === [0m[32m"TargetClosedError"[0m)
+[0m[1m59163 |[0m     e = [0m[35mnew[0m [0m[1mTargetClosedError2[0m(error.error.message)[0m[2m;[0m
+                    [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mlaunch: Target page, context or browser has been closed
+Browser logs:
+Chromium sandboxing failed!
+================================
+To avoid the sandboxing issue, do either of the following:
+  - (preferred): Configure your environment to support sandboxing
+  - (alternative): Launch Chromium without sandbox using 'chromiumSandbox: false' option
+================================
+
+Call log:
+[2m  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-0RiI46 --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=18[22m
+[2m  - [pid=18][err] [1105/151420.982933:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.[22m
+[2m  - [pid=18] <gracefully close start>[22m
+[2m  - [pid=18] <kill>[22m
+[2m  - [pid=18] <will force kill>[22m
+[2m  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>[22m
+[2m  - [pid=18] starting temporary directories cleanup[22m
+[2m  - [pid=18] finished temporary directories cleanup[22m
+[2m  - [pid=18] <gracefully close end>[22m
+[0m
+ log[0m[2m:[0m [ [0m[32m"  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-0RiI46 --remote-debugging-pipe --no-startup-window"[0m[0m[0m[2m,[0m
+  [0m[32m"  - <launched> pid=18"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18][err] [1105/151420.982933:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox."[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <gracefully close start>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <kill>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <will force kill>"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] starting temporary directories cleanup"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] finished temporary directories cleanup"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <gracefully close end>"[0m[0m
+][0m[2m,[0m
+
+[0m      [2mat [0m[0m[36m[2m/app/[0m[36mnode_modules/playwright-core/lib/coreBundle.js[0m[2m:[0m[33m59163[0m[2m:[33m13[0m
+[0m
+[2mBun v1.4.4 (Linux x64)[0m
+
+5. Patched Docker without - /bin/true
+patching file default.json (read from docker.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-d9e386d83cad [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25h6. Patched Docker without - bun run index.ts
+patching file default.json (read from docker.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-b84fa9606bcf [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25hBun is ok.
+Playwright is ok.
+[0m[1m59158 |[0m   }
+[0m[1m59159 |[0m   [0m[35mlet[0m e[0m[2m;[0m
+[0m[1m59160 |[0m   [0m[35mif[0m (error.error.name === [0m[32m"TimeoutError"[0m)
+[0m[1m59161 |[0m     e = [0m[35mnew[0m [0m[1mTimeoutError2[0m(error.error.message)[0m[2m;[0m
+[0m[1m59162 |[0m   [0m[35melse[0m [0m[35mif[0m (error.error.name === [0m[32m"TargetClosedError"[0m)
+[0m[1m59163 |[0m     e = [0m[35mnew[0m [0m[1mTargetClosedError2[0m(error.error.message)[0m[2m;[0m
+                    [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mlaunch: Target page, context or browser has been closed
+Browser logs:
+Chromium sandboxing failed!
+================================
+To avoid the sandboxing issue, do either of the following:
+  - (preferred): Configure your environment to support sandboxing
+  - (alternative): Launch Chromium without sandbox using 'chromiumSandbox: false' option
+================================
+
+Call log:
+[2m  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-nRqyZy --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=18[22m
+[2m  - [pid=18][err] [1105/151422.448218:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.[22m
+[2m  - [pid=18] <gracefully close start>[22m
+[2m  - [pid=18] <kill>[22m
+[2m  - [pid=18] <will force kill>[22m
+[2m  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>[22m
+[2m  - [pid=18] starting temporary directories cleanup[22m
+[2m  - [pid=18] finished temporary directories cleanup[22m
+[2m  - [pid=18] <gracefully close end>[22m
+[0m
+ log[0m[2m:[0m [ [0m[32m"  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-nRqyZy --remote-debugging-pipe --no-startup-window"[0m[0m[0m[2m,[0m
+  [0m[32m"  - <launched> pid=18"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18][err] [1105/151422.448218:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox."[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <gracefully close start>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <kill>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <will force kill>"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] starting temporary directories cleanup"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] finished temporary directories cleanup"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <gracefully close end>"[0m[0m
+][0m[2m,[0m
+
+[0m      [2mat [0m[0m[36m[2m/app/[0m[36mnode_modules/playwright-core/lib/coreBundle.js[0m[2m:[0m[33m59163[0m[2m:[33m13[0m
+[0m
+[2mBun v1.4.4 (Linux x64)[0m
+
+7. Patched Docker with - /bin/true
+patching file default.json (read from docker.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-f6479b5c81bc [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25h8. Patched Docker with - bun run index.ts
+patching file default.json (read from docker.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-64e709321f4e [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25hBun is ok.
+Playwright is ok.
+Chromium is ok.
+9. Playwright without - /bin/true
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-41bcb8483bf5 [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25h10. Playwright without - bun run index.ts
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-823101d17f70 [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25hBun is ok.
+Playwright is ok.
+[0m[1m59158 |[0m   }
+[0m[1m59159 |[0m   [0m[35mlet[0m e[0m[2m;[0m
+[0m[1m59160 |[0m   [0m[35mif[0m (error.error.name === [0m[32m"TimeoutError"[0m)
+[0m[1m59161 |[0m     e = [0m[35mnew[0m [0m[1mTimeoutError2[0m(error.error.message)[0m[2m;[0m
+[0m[1m59162 |[0m   [0m[35melse[0m [0m[35mif[0m (error.error.name === [0m[32m"TargetClosedError"[0m)
+[0m[1m59163 |[0m     e = [0m[35mnew[0m [0m[1mTargetClosedError2[0m(error.error.message)[0m[2m;[0m
+                    [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mlaunch: Target page, context or browser has been closed
+Browser logs:
+Chromium sandboxing failed!
+================================
+To avoid the sandboxing issue, do either of the following:
+  - (preferred): Configure your environment to support sandboxing
+  - (alternative): Launch Chromium without sandbox using 'chromiumSandbox: false' option
+================================
+
+Call log:
+[2m  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-D4t22R --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=18[22m
+[2m  - [pid=18][err] [1105/151425.454967:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.[22m
+[2m  - [pid=18] <gracefully close start>[22m
+[2m  - [pid=18] <kill>[22m
+[2m  - [pid=18] <will force kill>[22m
+[2m  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>[22m
+[2m  - [pid=18] starting temporary directories cleanup[22m
+[2m  - [pid=18] finished temporary directories cleanup[22m
+[2m  - [pid=18] <gracefully close end>[22m
+[0m
+ log[0m[2m:[0m [ [0m[32m"  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-D4t22R --remote-debugging-pipe --no-startup-window"[0m[0m[0m[2m,[0m
+  [0m[32m"  - <launched> pid=18"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18][err] [1105/151425.454967:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox."[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <gracefully close start>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <kill>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <will force kill>"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] starting temporary directories cleanup"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] finished temporary directories cleanup"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <gracefully close end>"[0m[0m
+][0m[2m,[0m
+
+[0m      [2mat [0m[0m[36m[2m/app/[0m[36mnode_modules/playwright-core/lib/coreBundle.js[0m[2m:[0m[33m59163[0m[2m:[33m13[0m
+[0m
+[2mBun v1.4.4 (Linux x64)[0m
+
+11. Playwright with - /bin/true
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-9c12d2dafd7f [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25hSIGSEGV: segmentation violation
+PC=0x7f2ebf40276d m=0 sigcode=1 addr=0x7ffee15c5fe8
+signal arrived during cgo execution
+
+goroutine 1 gp=0x170d027dc1e0 m=0 mp=0x559a52285060 [syscall, locked to thread]:
+runtime.cgocall(0x559a51e11cd0, 0x170d0299f250)
+	runtime/cgocall.go:167 +0x4b fp=0x170d0299f228 sp=0x170d0299f1f0 pc=0x559a51ab6beb
+cyphar.com/go-pathrs/internal/libpathrs._Cfunc_pathrs_procfs_open(0x170d028f9f40, 0x8)
+	_cgo_gotypes.go:448 +0x4a fp=0x170d0299f250 sp=0x170d0299f228 pc=0x559a51c72dca
+cyphar.com/go-pathrs/internal/libpathrs.ProcfsOpen(0x559a52262c70?)
+	cyphar.com/go-pathrs@v0.2.6/internal/libpathrs/libpathrs_linux.go:353 +0x25 fp=0x170d0299f280 sp=0x170d0299f250 pc=0x559a51c738e5
+cyphar.com/go-pathrs/procfs.Open({0x0, 0x0, 0x170d028b1490?})
+	cyphar.com/go-pathrs@v0.2.6/procfs/procfs_linux.go:109 +0x78 fp=0x170d0299f2c8 sp=0x170d0299f280 pc=0x559a51c756b8
+github.com/cyphar/filepath-securejoin/pathrs-lite/procfs.OpenProcRoot()
+	github.com/cyphar/filepath-securejoin@v0.7.0/pathrs-lite/procfs/procfs_libpathrs.go:54 +0x19 fp=0x170d0299f300 sp=0x170d0299f2c8 pc=0x559a51c75d39
+github.com/opencontainers/runc/internal/pathrs.retryEAGAIN[...](0x559a52263358?)
+	github.com/opencontainers/runc/internal/pathrs/retry.go:42 +0x3a fp=0x170d0299f380 sp=0x170d0299f300 pc=0x559a51c785ba
+github.com/opencontainers/runc/internal/pathrs.ProcThreadSelfOpen({0x559a51e1217b, 0x3}, 0x90000)
+	github.com/opencontainers/runc/internal/pathrs/procfs_pathrslite.go:75 +0x78 fp=0x170d0299f490 sp=0x170d0299f380 pc=0x559a51c77298
+github.com/opencontainers/runc/libcontainer/utils.fdRangeFrom(0x3, 0x559a52262d40)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:50 +0x54 fp=0x170d0299f530 sp=0x170d0299f490 pc=0x559a51c7a654
+github.com/opencontainers/runc/libcontainer/utils.CloseExecFrom(0x3)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:97 +0x8f fp=0x170d0299f588 sp=0x170d0299f530 pc=0x559a51c7a8ef
+github.com/opencontainers/runc/libcontainer.finalizeNamespace(0x170d02912120)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:304 +0x2f fp=0x170d0299f690 sp=0x170d0299f588 pc=0x559a51d88c4f
+github.com/opencontainers/runc/libcontainer.(*linuxStandardInit).Init(0x170d0299f988)
+	github.com/opencontainers/runc/libcontainer/standard_init_linux.go:201 +0xcfa fp=0x170d0299f948 sp=0x170d0299f690 pc=0x559a51d9f4da
+github.com/opencontainers/runc/libcontainer.containerInit({0x170d02802017, 0x8}, 0x170d02912120, 0x170d02809d08, 0x170d027da0f0, 0x0, 0x170d027da0e8, 0x170d027da0e0)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:266 +0x1ba fp=0x170d0299f9f8 sp=0x170d0299f948 pc=0x559a51d8895a
+github.com/opencontainers/runc/libcontainer.startInitialization()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:238 +0xa1a fp=0x170d0299fd40 sp=0x170d0299f9f8 pc=0x559a51d8873a
+github.com/opencontainers/runc/libcontainer.Init()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:110 +0x25 fp=0x170d0299fd88 sp=0x170d0299fd40 pc=0x559a51d87cc5
+main.init.0()
+	github.com/opencontainers/runc/init.go:14 +0x33 fp=0x170d0299fd98 sp=0x170d0299fd88 pc=0x559a51debcd3
+runtime.doInit1(0x559a52274df0)
+	runtime/proc.go:8154 +0xd7 fp=0x170d0299feb8 sp=0x170d0299fd98 pc=0x559a51a90ab7
+runtime.doInit(...)
+	runtime/proc.go:8121
+runtime.main()
+	runtime/proc.go:269 +0x3b0 fp=0x170d0299ffe0 sp=0x170d0299feb8 pc=0x559a51a821d0
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d0299ffe8 sp=0x170d0299ffe0 pc=0x559a51ac10e1
+
+goroutine 2 gp=0x170d027dcd20 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x170d02822fa8 sp=0x170d02822f88 pc=0x559a51ab9f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.forcegchelper()
+	runtime/proc.go:387 +0xb8 fp=0x170d02822fe0 sp=0x170d02822fa8 pc=0x559a51a82518
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d02822fe8 sp=0x170d02822fe0 pc=0x559a51ac10e1
+created by runtime.init.7 in goroutine 1
+	runtime/proc.go:375 +0x1a
+
+goroutine 3 gp=0x170d027dd2c0 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x170d02823788 sp=0x170d02823768 pc=0x559a51ab9f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.bgsweep(0x170d0284a000)
+	runtime/mgcsweep.go:279 +0x94 fp=0x170d028237c8 sp=0x170d02823788 pc=0x559a51a6cfb4
+runtime.gcenable.gowrap1()
+	runtime/mgc.go:214 +0x17 fp=0x170d028237e0 sp=0x170d028237c8 pc=0x559a51ab03d7
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d028237e8 sp=0x170d028237e0 pc=0x559a51ac10e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:214 +0x66
+
+goroutine 4 gp=0x170d027dd4a0 m=nil [GC scavenge wait]:
+runtime.gopark(0x170d0284a000?, 0x559a51e3a0f0?, 0x1?, 0x0?, 0x170d027dd4a0?)
+	runtime/proc.go:474 +0xca fp=0x170d02823f78 sp=0x170d02823f58 pc=0x559a51ab9f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*scavengerState).park(0x559a52283cc0)
+	runtime/mgcscavenge.go:425 +0x49 fp=0x170d02823fa8 sp=0x170d02823f78 pc=0x559a51a6ab89
+runtime.bgscavenge(0x170d0284a000)
+	runtime/mgcscavenge.go:653 +0x3c fp=0x170d02823fc8 sp=0x170d02823fa8 pc=0x559a51a6b0dc
+runtime.gcenable.gowrap2()
+	runtime/mgc.go:215 +0x17 fp=0x170d02823fe0 sp=0x170d02823fc8 pc=0x559a51ab0397
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d02823fe8 sp=0x170d02823fe0 pc=0x559a51ac10e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:215 +0xa5
+
+goroutine 5 gp=0x170d027dda40 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x170d02822788 sp=0x170d02822768 pc=0x559a51ab9f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.updateMaxProcsGoroutine()
+	runtime/proc.go:7146 +0xe7 fp=0x170d028227e0 sp=0x170d02822788 pc=0x559a51a8fa47
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d028227e8 sp=0x170d028227e0 pc=0x559a51ac10e1
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	runtime/proc.go:7134 +0x37
+
+goroutine 6 gp=0x170d028661e0 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x170d02824620 sp=0x170d02824600 pc=0x559a51ab9f4a
+runtime.runFinalizers()
+	runtime/mfinal.go:210 +0x107 fp=0x170d028247e0 sp=0x170d02824620 pc=0x559a51a5e067
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d028247e8 sp=0x170d028247e0 pc=0x559a51ac10e1
+created by runtime.createfing in goroutine 1
+	runtime/mfinal.go:172 +0x3d
+
+goroutine 7 gp=0x170d028663c0 m=nil [cleanup wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x170d02824f68 sp=0x170d02824f48 pc=0x559a51ab9f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*cleanupQueue).dequeue(0x559a52283f60)
+	runtime/mcleanup.go:522 +0xd3 fp=0x170d02824fa0 sp=0x170d02824f68 pc=0x559a51a5ad53
+runtime.runCleanups()
+	runtime/mcleanup.go:718 +0x45 fp=0x170d02824fe0 sp=0x170d02824fa0 pc=0x559a51a5b3c5
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x170d02824fe8 sp=0x170d02824fe0 pc=0x559a51ac10e1
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	runtime/mcleanup.go:672 +0xa5
+
+rax    0x0
+rbx    0x7ffee15c62d8
+rcx    0x7f2ebf40271b
+rdx    0x90
+rdi    0x7ffee15c5ff4
+rsi    0x7ffee15c6188
+rbp    0x26a4
+rsp    0x7ffee15c5ff0
+r8     0x7f2ebf219ac0
+r9     0x20
+r10    0x1900
+r11    0x202
+r12    0x7ffee15c67f0
+r13    0x0
+r14    0x7ffee15c5ff4
+r15    0x7f2ebf1762f0
+rip    0x7f2ebf40276d
+rflags 0x10246
+cs     0x33
+fs     0x0
+gs     0x0
+Error response from daemon: bind-mount /proc/245106/ns/net -> /var/run/docker/netns/eabe3955244c: no such file or directory
+12. Playwright with - bun run index.ts
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-1a28b3da9008 [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25hSIGSEGV: segmentation violation
+PC=0x7f97311af76d m=0 sigcode=1 addr=0x7ffc1f6a7f88
+signal arrived during cgo execution
+
+goroutine 1 gp=0x352ef083c1e0 m=0 mp=0x55a443bd1060 [syscall, locked to thread]:
+runtime.cgocall(0x55a44375dcd0, 0x352ef0a1f250)
+	runtime/cgocall.go:167 +0x4b fp=0x352ef0a1f228 sp=0x352ef0a1f1f0 pc=0x55a443402beb
+cyphar.com/go-pathrs/internal/libpathrs._Cfunc_pathrs_procfs_open(0x352ef09e1f70, 0x8)
+	_cgo_gotypes.go:448 +0x4a fp=0x352ef0a1f250 sp=0x352ef0a1f228 pc=0x55a4435bedca
+cyphar.com/go-pathrs/internal/libpathrs.ProcfsOpen(0x55a443baec70?)
+	cyphar.com/go-pathrs@v0.2.6/internal/libpathrs/libpathrs_linux.go:353 +0x25 fp=0x352ef0a1f280 sp=0x352ef0a1f250 pc=0x55a4435bf8e5
+cyphar.com/go-pathrs/procfs.Open({0x0, 0x0, 0x352ef0949490?})
+	cyphar.com/go-pathrs@v0.2.6/procfs/procfs_linux.go:109 +0x78 fp=0x352ef0a1f2c8 sp=0x352ef0a1f280 pc=0x55a4435c16b8
+github.com/cyphar/filepath-securejoin/pathrs-lite/procfs.OpenProcRoot()
+	github.com/cyphar/filepath-securejoin@v0.7.0/pathrs-lite/procfs/procfs_libpathrs.go:54 +0x19 fp=0x352ef0a1f300 sp=0x352ef0a1f2c8 pc=0x55a4435c1d39
+github.com/opencontainers/runc/internal/pathrs.retryEAGAIN[...](0x55a443baf358?)
+	github.com/opencontainers/runc/internal/pathrs/retry.go:42 +0x3a fp=0x352ef0a1f380 sp=0x352ef0a1f300 pc=0x55a4435c45ba
+github.com/opencontainers/runc/internal/pathrs.ProcThreadSelfOpen({0x55a44375e17b, 0x3}, 0x90000)
+	github.com/opencontainers/runc/internal/pathrs/procfs_pathrslite.go:75 +0x78 fp=0x352ef0a1f490 sp=0x352ef0a1f380 pc=0x55a4435c3298
+github.com/opencontainers/runc/libcontainer/utils.fdRangeFrom(0x3, 0x55a443baed40)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:50 +0x54 fp=0x352ef0a1f530 sp=0x352ef0a1f490 pc=0x55a4435c6654
+github.com/opencontainers/runc/libcontainer/utils.CloseExecFrom(0x3)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:97 +0x8f fp=0x352ef0a1f588 sp=0x352ef0a1f530 pc=0x55a4435c68ef
+github.com/opencontainers/runc/libcontainer.finalizeNamespace(0x352ef095e120)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:304 +0x2f fp=0x352ef0a1f690 sp=0x352ef0a1f588 pc=0x55a4436d4c4f
+github.com/opencontainers/runc/libcontainer.(*linuxStandardInit).Init(0x352ef0a1f988)
+	github.com/opencontainers/runc/libcontainer/standard_init_linux.go:201 +0xcfa fp=0x352ef0a1f948 sp=0x352ef0a1f690 pc=0x55a4436eb4da
+github.com/opencontainers/runc/libcontainer.containerInit({0x352ef0862017, 0x8}, 0x352ef095e120, 0x352ef0869d08, 0x352ef083a050, 0x0, 0x352ef083a048, 0x352ef083a040)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:266 +0x1ba fp=0x352ef0a1f9f8 sp=0x352ef0a1f948 pc=0x55a4436d495a
+github.com/opencontainers/runc/libcontainer.startInitialization()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:238 +0xa1a fp=0x352ef0a1fd40 sp=0x352ef0a1f9f8 pc=0x55a4436d473a
+github.com/opencontainers/runc/libcontainer.Init()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:110 +0x25 fp=0x352ef0a1fd88 sp=0x352ef0a1fd40 pc=0x55a4436d3cc5
+main.init.0()
+	github.com/opencontainers/runc/init.go:14 +0x33 fp=0x352ef0a1fd98 sp=0x352ef0a1fd88 pc=0x55a443737cd3
+runtime.doInit1(0x55a443bc0df0)
+	runtime/proc.go:8154 +0xd7 fp=0x352ef0a1feb8 sp=0x352ef0a1fd98 pc=0x55a4433dcab7
+runtime.doInit(...)
+	runtime/proc.go:8121
+runtime.main()
+	runtime/proc.go:269 +0x3b0 fp=0x352ef0a1ffe0 sp=0x352ef0a1feb8 pc=0x55a4433ce1d0
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef0a1ffe8 sp=0x352ef0a1ffe0 pc=0x55a44340d0e1
+
+goroutine 2 gp=0x352ef083cd20 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x352ef0884fa8 sp=0x352ef0884f88 pc=0x55a443405f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.forcegchelper()
+	runtime/proc.go:387 +0xb8 fp=0x352ef0884fe0 sp=0x352ef0884fa8 pc=0x55a4433ce518
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef0884fe8 sp=0x352ef0884fe0 pc=0x55a44340d0e1
+created by runtime.init.7 in goroutine 1
+	runtime/proc.go:375 +0x1a
+
+goroutine 3 gp=0x352ef083d2c0 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x352ef0885788 sp=0x352ef0885768 pc=0x55a443405f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.bgsweep(0x352ef08aa000)
+	runtime/mgcsweep.go:279 +0x94 fp=0x352ef08857c8 sp=0x352ef0885788 pc=0x55a4433b8fb4
+runtime.gcenable.gowrap1()
+	runtime/mgc.go:214 +0x17 fp=0x352ef08857e0 sp=0x352ef08857c8 pc=0x55a4433fc3d7
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef08857e8 sp=0x352ef08857e0 pc=0x55a44340d0e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:214 +0x66
+
+goroutine 4 gp=0x352ef083d4a0 m=nil [GC scavenge wait]:
+runtime.gopark(0x352ef08aa000?, 0x55a4437860f0?, 0x1?, 0x0?, 0x352ef083d4a0?)
+	runtime/proc.go:474 +0xca fp=0x352ef0885f78 sp=0x352ef0885f58 pc=0x55a443405f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*scavengerState).park(0x55a443bcfcc0)
+	runtime/mgcscavenge.go:425 +0x49 fp=0x352ef0885fa8 sp=0x352ef0885f78 pc=0x55a4433b6b89
+runtime.bgscavenge(0x352ef08aa000)
+	runtime/mgcscavenge.go:653 +0x3c fp=0x352ef0885fc8 sp=0x352ef0885fa8 pc=0x55a4433b70dc
+runtime.gcenable.gowrap2()
+	runtime/mgc.go:215 +0x17 fp=0x352ef0885fe0 sp=0x352ef0885fc8 pc=0x55a4433fc397
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef0885fe8 sp=0x352ef0885fe0 pc=0x55a44340d0e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:215 +0xa5
+
+goroutine 18 gp=0x352ef09043c0 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x352ef0880788 sp=0x352ef0880768 pc=0x55a443405f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.updateMaxProcsGoroutine()
+	runtime/proc.go:7146 +0xe7 fp=0x352ef08807e0 sp=0x352ef0880788 pc=0x55a4433dba47
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef08807e8 sp=0x352ef08807e0 pc=0x55a44340d0e1
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	runtime/proc.go:7134 +0x37
+
+goroutine 19 gp=0x352ef0904960 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x352ef0880e20 sp=0x352ef0880e00 pc=0x55a443405f4a
+runtime.runFinalizers()
+	runtime/mfinal.go:210 +0x107 fp=0x352ef0880fe0 sp=0x352ef0880e20 pc=0x55a4433aa067
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef0880fe8 sp=0x352ef0880fe0 pc=0x55a44340d0e1
+created by runtime.createfing in goroutine 1
+	runtime/mfinal.go:172 +0x3d
+
+goroutine 20 gp=0x352ef0904b40 m=nil [cleanup wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x352ef0881768 sp=0x352ef0881748 pc=0x55a443405f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*cleanupQueue).dequeue(0x55a443bcff60)
+	runtime/mcleanup.go:522 +0xd3 fp=0x352ef08817a0 sp=0x352ef0881768 pc=0x55a4433a6d53
+runtime.runCleanups()
+	runtime/mcleanup.go:718 +0x45 fp=0x352ef08817e0 sp=0x352ef08817a0 pc=0x55a4433a73c5
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x352ef08817e8 sp=0x352ef08817e0 pc=0x55a44340d0e1
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	runtime/mcleanup.go:672 +0xa5
+
+rax    0x0
+rbx    0x7ffc1f6a8278
+rcx    0x7f97311af71b
+rdx    0x90
+rdi    0x7ffc1f6a7f94
+rsi    0x7ffc1f6a8128
+rbp    0x26a1
+rsp    0x7ffc1f6a7f90
+r8     0x7f9731019ac0
+r9     0x20
+r10    0x1900
+r11    0x202
+r12    0x7ffc1f6a8790
+r13    0x0
+r14    0x7ffc1f6a7f94
+r15    0x7f9730f762f0
+rip    0x7f97311af76d
+rflags 0x10246
+cs     0x33
+fs     0x0
+gs     0x0
+Error response from daemon: bind-mount /proc/245200/ns/net -> /var/run/docker/netns/96f5085348a2: no such file or directory
+13. Patched Playwright without - /bin/true
+patching file default.json (read from playwright.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-07a823277bf2 [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25h14. Patched Playwright without - bun run index.ts
+patching file default.json (read from playwright.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-5c89c51668c4 [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25hBun is ok.
+Playwright is ok.
+[0m[1m59158 |[0m   }
+[0m[1m59159 |[0m   [0m[35mlet[0m e[0m[2m;[0m
+[0m[1m59160 |[0m   [0m[35mif[0m (error.error.name === [0m[32m"TimeoutError"[0m)
+[0m[1m59161 |[0m     e = [0m[35mnew[0m [0m[1mTimeoutError2[0m(error.error.message)[0m[2m;[0m
+[0m[1m59162 |[0m   [0m[35melse[0m [0m[35mif[0m (error.error.name === [0m[32m"TargetClosedError"[0m)
+[0m[1m59163 |[0m     e = [0m[35mnew[0m [0m[1mTargetClosedError2[0m(error.error.message)[0m[2m;[0m
+                    [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mlaunch: Target page, context or browser has been closed
+Browser logs:
+Chromium sandboxing failed!
+================================
+To avoid the sandboxing issue, do either of the following:
+  - (preferred): Configure your environment to support sandboxing
+  - (alternative): Launch Chromium without sandbox using 'chromiumSandbox: false' option
+================================
+
+Call log:
+[2m  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-l2MJzy --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=18[22m
+[2m  - [pid=18][err] [1105/151427.634284:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox.[22m
+[2m  - [pid=18] <gracefully close start>[22m
+[2m  - [pid=18] <kill>[22m
+[2m  - [pid=18] <will force kill>[22m
+[2m  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>[22m
+[2m  - [pid=18] starting temporary directories cleanup[22m
+[2m  - [pid=18] finished temporary directories cleanup[22m
+[2m  - [pid=18] <gracefully close end>[22m
+[0m
+ log[0m[2m:[0m [ [0m[32m"  - <launching> /ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/tmp/playwright_chromiumdev_profile-l2MJzy --remote-debugging-pipe --no-startup-window"[0m[0m[0m[2m,[0m
+  [0m[32m"  - <launched> pid=18"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18][err] [1105/151427.634284:FATAL:content/browser/zygote_host/zygote_host_impl_linux.cc:130] No usable sandbox! If you are running on Ubuntu 23.10+ or another Linux distro that has disabled unprivileged user namespaces with AppArmor, see https://chromium.googlesource.com/chromium/src/+/main/docs/security/apparmor-userns-restrictions.md. Otherwise see https://chromium.googlesource.com/chromium/src/+/main/docs/linux/suid_sandbox_development.md for more information on developing with the (older) SUID sandbox. If you want to live dangerously and need an immediate workaround, you can try using --no-sandbox."[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <gracefully close start>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <kill>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <will force kill>"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] <process did exit: exitCode=null, signal=SIGTRAP>"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] starting temporary directories cleanup"[0m[0m[0m[2m,[0m
+  [0m[32m"  - [pid=18] finished temporary directories cleanup"[0m[0m[0m[2m,[0m [0m[32m"  - [pid=18] <gracefully close end>"[0m[0m
+][0m[2m,[0m
+
+[0m      [2mat [0m[0m[36m[2m/app/[0m[36mnode_modules/playwright-core/lib/coreBundle.js[0m[2m:[0m[33m59163[0m[2m:[33m13[0m
+[0m
+[2mBun v1.4.4 (Linux x64)[0m
+
+15. Patched Playwright with - /bin/true
+patching file default.json (read from playwright.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-d4683d0d1954 [32mCreated[0m                                                                                                             [34m0.0s[0m
+[?25hSIGSEGV: segmentation violation
+PC=0x7fd03d7b66f4 m=0 sigcode=1 addr=0x7ffce506df48
+signal arrived during cgo execution
+
+goroutine 1 gp=0x2509f18d01e0 m=0 mp=0x55d0d55ff060 [syscall, locked to thread]:
+runtime.cgocall(0x55d0d518bcd0, 0x2509f19b1250)
+	runtime/cgocall.go:167 +0x4b fp=0x2509f19b1228 sp=0x2509f19b11f0 pc=0x55d0d4e30beb
+cyphar.com/go-pathrs/internal/libpathrs._Cfunc_pathrs_procfs_open(0x2509f19fa0a0, 0x8)
+	_cgo_gotypes.go:448 +0x4a fp=0x2509f19b1250 sp=0x2509f19b1228 pc=0x55d0d4fecdca
+cyphar.com/go-pathrs/internal/libpathrs.ProcfsOpen(0x55d0d55dcc70?)
+	cyphar.com/go-pathrs@v0.2.6/internal/libpathrs/libpathrs_linux.go:353 +0x25 fp=0x2509f19b1280 sp=0x2509f19b1250 pc=0x55d0d4fed8e5
+cyphar.com/go-pathrs/procfs.Open({0x0, 0x0, 0x2509f19c5490?})
+	cyphar.com/go-pathrs@v0.2.6/procfs/procfs_linux.go:109 +0x78 fp=0x2509f19b12c8 sp=0x2509f19b1280 pc=0x55d0d4fef6b8
+github.com/cyphar/filepath-securejoin/pathrs-lite/procfs.OpenProcRoot()
+	github.com/cyphar/filepath-securejoin@v0.7.0/pathrs-lite/procfs/procfs_libpathrs.go:54 +0x19 fp=0x2509f19b1300 sp=0x2509f19b12c8 pc=0x55d0d4fefd39
+github.com/opencontainers/runc/internal/pathrs.retryEAGAIN[...](0x55d0d55dd358?)
+	github.com/opencontainers/runc/internal/pathrs/retry.go:42 +0x3a fp=0x2509f19b1380 sp=0x2509f19b1300 pc=0x55d0d4ff25ba
+github.com/opencontainers/runc/internal/pathrs.ProcThreadSelfOpen({0x55d0d518c17b, 0x3}, 0x90000)
+	github.com/opencontainers/runc/internal/pathrs/procfs_pathrslite.go:75 +0x78 fp=0x2509f19b1490 sp=0x2509f19b1380 pc=0x55d0d4ff1298
+github.com/opencontainers/runc/libcontainer/utils.fdRangeFrom(0x3, 0x55d0d55dcd40)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:50 +0x54 fp=0x2509f19b1530 sp=0x2509f19b1490 pc=0x55d0d4ff4654
+github.com/opencontainers/runc/libcontainer/utils.CloseExecFrom(0x3)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:97 +0x8f fp=0x2509f19b1588 sp=0x2509f19b1530 pc=0x55d0d4ff48ef
+github.com/opencontainers/runc/libcontainer.finalizeNamespace(0x2509f1a06120)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:304 +0x2f fp=0x2509f19b1690 sp=0x2509f19b1588 pc=0x55d0d5102c4f
+github.com/opencontainers/runc/libcontainer.(*linuxStandardInit).Init(0x2509f19b1988)
+	github.com/opencontainers/runc/libcontainer/standard_init_linux.go:201 +0xcfa fp=0x2509f19b1948 sp=0x2509f19b1690 pc=0x55d0d51194da
+github.com/opencontainers/runc/libcontainer.containerInit({0x2509f18f6017, 0x8}, 0x2509f1a06120, 0x2509f18fdd08, 0x2509f18ce0f0, 0x0, 0x2509f18ce0e8, 0x2509f18ce0e0)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:266 +0x1ba fp=0x2509f19b19f8 sp=0x2509f19b1948 pc=0x55d0d510295a
+github.com/opencontainers/runc/libcontainer.startInitialization()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:238 +0xa1a fp=0x2509f19b1d40 sp=0x2509f19b19f8 pc=0x55d0d510273a
+github.com/opencontainers/runc/libcontainer.Init()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:110 +0x25 fp=0x2509f19b1d88 sp=0x2509f19b1d40 pc=0x55d0d5101cc5
+main.init.0()
+	github.com/opencontainers/runc/init.go:14 +0x33 fp=0x2509f19b1d98 sp=0x2509f19b1d88 pc=0x55d0d5165cd3
+runtime.doInit1(0x55d0d55eedf0)
+	runtime/proc.go:8154 +0xd7 fp=0x2509f19b1eb8 sp=0x2509f19b1d98 pc=0x55d0d4e0aab7
+runtime.doInit(...)
+	runtime/proc.go:8121
+runtime.main()
+	runtime/proc.go:269 +0x3b0 fp=0x2509f19b1fe0 sp=0x2509f19b1eb8 pc=0x55d0d4dfc1d0
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f19b1fe8 sp=0x2509f19b1fe0 pc=0x55d0d4e3b0e1
+
+goroutine 2 gp=0x2509f18d0d20 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x2509f1916fa8 sp=0x2509f1916f88 pc=0x55d0d4e33f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.forcegchelper()
+	runtime/proc.go:387 +0xb8 fp=0x2509f1916fe0 sp=0x2509f1916fa8 pc=0x55d0d4dfc518
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f1916fe8 sp=0x2509f1916fe0 pc=0x55d0d4e3b0e1
+created by runtime.init.7 in goroutine 1
+	runtime/proc.go:375 +0x1a
+
+goroutine 3 gp=0x2509f18d12c0 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x2509f1917788 sp=0x2509f1917768 pc=0x55d0d4e33f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.bgsweep(0x2509f193e000)
+	runtime/mgcsweep.go:279 +0x94 fp=0x2509f19177c8 sp=0x2509f1917788 pc=0x55d0d4de6fb4
+runtime.gcenable.gowrap1()
+	runtime/mgc.go:214 +0x17 fp=0x2509f19177e0 sp=0x2509f19177c8 pc=0x55d0d4e2a3d7
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f19177e8 sp=0x2509f19177e0 pc=0x55d0d4e3b0e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:214 +0x66
+
+goroutine 4 gp=0x2509f18d14a0 m=nil [GC scavenge wait]:
+runtime.gopark(0x2509f193e000?, 0x55d0d51b40f0?, 0x1?, 0x0?, 0x2509f18d14a0?)
+	runtime/proc.go:474 +0xca fp=0x2509f1917f78 sp=0x2509f1917f58 pc=0x55d0d4e33f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*scavengerState).park(0x55d0d55fdcc0)
+	runtime/mgcscavenge.go:425 +0x49 fp=0x2509f1917fa8 sp=0x2509f1917f78 pc=0x55d0d4de4b89
+runtime.bgscavenge(0x2509f193e000)
+	runtime/mgcscavenge.go:653 +0x3c fp=0x2509f1917fc8 sp=0x2509f1917fa8 pc=0x55d0d4de50dc
+runtime.gcenable.gowrap2()
+	runtime/mgc.go:215 +0x17 fp=0x2509f1917fe0 sp=0x2509f1917fc8 pc=0x55d0d4e2a397
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f1917fe8 sp=0x2509f1917fe0 pc=0x55d0d4e3b0e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:215 +0xa5
+
+goroutine 5 gp=0x2509f18d1a40 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x2509f1916788 sp=0x2509f1916768 pc=0x55d0d4e33f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.updateMaxProcsGoroutine()
+	runtime/proc.go:7146 +0xe7 fp=0x2509f19167e0 sp=0x2509f1916788 pc=0x55d0d4e09a47
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f19167e8 sp=0x2509f19167e0 pc=0x55d0d4e3b0e1
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	runtime/proc.go:7134 +0x37
+
+goroutine 6 gp=0x2509f195a1e0 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x2509f1918620 sp=0x2509f1918600 pc=0x55d0d4e33f4a
+runtime.runFinalizers()
+	runtime/mfinal.go:210 +0x107 fp=0x2509f19187e0 sp=0x2509f1918620 pc=0x55d0d4dd8067
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f19187e8 sp=0x2509f19187e0 pc=0x55d0d4e3b0e1
+created by runtime.createfing in goroutine 1
+	runtime/mfinal.go:172 +0x3d
+
+goroutine 7 gp=0x2509f195a3c0 m=nil [cleanup wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x2509f1918f68 sp=0x2509f1918f48 pc=0x55d0d4e33f4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*cleanupQueue).dequeue(0x55d0d55fdf60)
+	runtime/mcleanup.go:522 +0xd3 fp=0x2509f1918fa0 sp=0x2509f1918f68 pc=0x55d0d4dd4d53
+runtime.runCleanups()
+	runtime/mcleanup.go:718 +0x45 fp=0x2509f1918fe0 sp=0x2509f1918fa0 pc=0x55d0d4dd53c5
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x2509f1918fe8 sp=0x2509f1918fe0 pc=0x55d0d4e3b0e1
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	runtime/mcleanup.go:672 +0xa5
+
+rax    0x0
+rbx    0x7ffce506e198
+rcx    0x7fd03d7bc105
+rdx    0x26a6
+rdi    0x7ffce506e198
+rsi    0x26a6
+rbp    0x26a6
+rsp    0x7ffce506deb0
+r8     0x7fd03d619ac0
+r9     0x20
+r10    0x0
+r11    0x206
+r12    0x7ffce506e6b0
+r13    0x0
+r14    0x26a6
+r15    0x0
+rip    0x7fd03d7b66f4
+rflags 0x10206
+cs     0x33
+fs     0x0
+gs     0x0
+Error response from daemon: bind-mount /proc/245600/ns/net -> /var/run/docker/netns/c91abc0c283f: no such file or directory
+16. Patched Playwright with - bun run index.ts
+patching file default.json (read from playwright.json)
+[?25l[0G[2K[+] run 1/1
+[2K [32m✔[0m Container playwright-seccomp-debug-test-run-f36f7a2ee714 [32mCreated[0m                                                                                                             [34m0.1s[0m
+[?25hSIGSEGV: segmentation violation
+PC=0x7f6f1885a114 m=0 sigcode=1 addr=0x7ffe890f9f58
+signal arrived during cgo execution
+
+goroutine 1 gp=0x3995f02621e0 m=0 mp=0x559c7d3c7060 [syscall, locked to thread]:
+runtime.cgocall(0x559c7cf53cd0, 0x3995f041f250)
+	runtime/cgocall.go:167 +0x4b fp=0x3995f041f228 sp=0x3995f041f1f0 pc=0x559c7cbf8beb
+cyphar.com/go-pathrs/internal/libpathrs._Cfunc_pathrs_procfs_open(0x3995f037a0a0, 0x8)
+	_cgo_gotypes.go:448 +0x4a fp=0x3995f041f250 sp=0x3995f041f228 pc=0x559c7cdb4dca
+cyphar.com/go-pathrs/internal/libpathrs.ProcfsOpen(0x559c7d3a4c70?)
+	cyphar.com/go-pathrs@v0.2.6/internal/libpathrs/libpathrs_linux.go:353 +0x25 fp=0x3995f041f280 sp=0x3995f041f250 pc=0x559c7cdb58e5
+cyphar.com/go-pathrs/procfs.Open({0x0, 0x0, 0x3995f0337490?})
+	cyphar.com/go-pathrs@v0.2.6/procfs/procfs_linux.go:109 +0x78 fp=0x3995f041f2c8 sp=0x3995f041f280 pc=0x559c7cdb76b8
+github.com/cyphar/filepath-securejoin/pathrs-lite/procfs.OpenProcRoot()
+	github.com/cyphar/filepath-securejoin@v0.7.0/pathrs-lite/procfs/procfs_libpathrs.go:54 +0x19 fp=0x3995f041f300 sp=0x3995f041f2c8 pc=0x559c7cdb7d39
+github.com/opencontainers/runc/internal/pathrs.retryEAGAIN[...](0x559c7d3a5358?)
+	github.com/opencontainers/runc/internal/pathrs/retry.go:42 +0x3a fp=0x3995f041f380 sp=0x3995f041f300 pc=0x559c7cdba5ba
+github.com/opencontainers/runc/internal/pathrs.ProcThreadSelfOpen({0x559c7cf5417b, 0x3}, 0x90000)
+	github.com/opencontainers/runc/internal/pathrs/procfs_pathrslite.go:75 +0x78 fp=0x3995f041f490 sp=0x3995f041f380 pc=0x559c7cdb9298
+github.com/opencontainers/runc/libcontainer/utils.fdRangeFrom(0x3, 0x559c7d3a4d40)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:50 +0x54 fp=0x3995f041f530 sp=0x3995f041f490 pc=0x559c7cdbc654
+github.com/opencontainers/runc/libcontainer/utils.CloseExecFrom(0x3)
+	github.com/opencontainers/runc/libcontainer/utils/utils_unix.go:97 +0x8f fp=0x3995f041f588 sp=0x3995f041f530 pc=0x559c7cdbc8ef
+github.com/opencontainers/runc/libcontainer.finalizeNamespace(0x3995f0398120)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:304 +0x2f fp=0x3995f041f690 sp=0x3995f041f588 pc=0x559c7cecac4f
+github.com/opencontainers/runc/libcontainer.(*linuxStandardInit).Init(0x3995f041f988)
+	github.com/opencontainers/runc/libcontainer/standard_init_linux.go:201 +0xcfa fp=0x3995f041f948 sp=0x3995f041f690 pc=0x559c7cee14da
+github.com/opencontainers/runc/libcontainer.containerInit({0x3995f0288017, 0x8}, 0x3995f0398120, 0x3995f028fd08, 0x3995f02600f0, 0x0, 0x3995f02600e8, 0x3995f02600e0)
+	github.com/opencontainers/runc/libcontainer/init_linux.go:266 +0x1ba fp=0x3995f041f9f8 sp=0x3995f041f948 pc=0x559c7ceca95a
+github.com/opencontainers/runc/libcontainer.startInitialization()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:238 +0xa1a fp=0x3995f041fd40 sp=0x3995f041f9f8 pc=0x559c7ceca73a
+github.com/opencontainers/runc/libcontainer.Init()
+	github.com/opencontainers/runc/libcontainer/init_linux.go:110 +0x25 fp=0x3995f041fd88 sp=0x3995f041fd40 pc=0x559c7cec9cc5
+main.init.0()
+	github.com/opencontainers/runc/init.go:14 +0x33 fp=0x3995f041fd98 sp=0x3995f041fd88 pc=0x559c7cf2dcd3
+runtime.doInit1(0x559c7d3b6df0)
+	runtime/proc.go:8154 +0xd7 fp=0x3995f041feb8 sp=0x3995f041fd98 pc=0x559c7cbd2ab7
+runtime.doInit(...)
+	runtime/proc.go:8121
+runtime.main()
+	runtime/proc.go:269 +0x3b0 fp=0x3995f041ffe0 sp=0x3995f041feb8 pc=0x559c7cbc41d0
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f041ffe8 sp=0x3995f041ffe0 pc=0x559c7cc030e1
+
+goroutine 2 gp=0x3995f0262d20 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x3995f02a8fa8 sp=0x3995f02a8f88 pc=0x559c7cbfbf4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.forcegchelper()
+	runtime/proc.go:387 +0xb8 fp=0x3995f02a8fe0 sp=0x3995f02a8fa8 pc=0x559c7cbc4518
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f02a8fe8 sp=0x3995f02a8fe0 pc=0x559c7cc030e1
+created by runtime.init.7 in goroutine 1
+	runtime/proc.go:375 +0x1a
+
+goroutine 3 gp=0x3995f02632c0 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x3995f02a9788 sp=0x3995f02a9768 pc=0x559c7cbfbf4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.bgsweep(0x3995f02d0000)
+	runtime/mgcsweep.go:279 +0x94 fp=0x3995f02a97c8 sp=0x3995f02a9788 pc=0x559c7cbaefb4
+runtime.gcenable.gowrap1()
+	runtime/mgc.go:214 +0x17 fp=0x3995f02a97e0 sp=0x3995f02a97c8 pc=0x559c7cbf23d7
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f02a97e8 sp=0x3995f02a97e0 pc=0x559c7cc030e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:214 +0x66
+
+goroutine 4 gp=0x3995f02634a0 m=nil [GC scavenge wait]:
+runtime.gopark(0x3995f02d0000?, 0x559c7cf7c0f0?, 0x1?, 0x0?, 0x3995f02634a0?)
+	runtime/proc.go:474 +0xca fp=0x3995f02a9f78 sp=0x3995f02a9f58 pc=0x559c7cbfbf4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*scavengerState).park(0x559c7d3c5cc0)
+	runtime/mgcscavenge.go:425 +0x49 fp=0x3995f02a9fa8 sp=0x3995f02a9f78 pc=0x559c7cbacb89
+runtime.bgscavenge(0x3995f02d0000)
+	runtime/mgcscavenge.go:653 +0x3c fp=0x3995f02a9fc8 sp=0x3995f02a9fa8 pc=0x559c7cbad0dc
+runtime.gcenable.gowrap2()
+	runtime/mgc.go:215 +0x17 fp=0x3995f02a9fe0 sp=0x3995f02a9fc8 pc=0x559c7cbf2397
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f02a9fe8 sp=0x3995f02a9fe0 pc=0x559c7cc030e1
+created by runtime.gcenable in goroutine 1
+	runtime/mgc.go:215 +0xa5
+
+goroutine 5 gp=0x3995f0263a40 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x3995f02a8788 sp=0x3995f02a8768 pc=0x559c7cbfbf4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.updateMaxProcsGoroutine()
+	runtime/proc.go:7146 +0xe7 fp=0x3995f02a87e0 sp=0x3995f02a8788 pc=0x559c7cbd1a47
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f02a87e8 sp=0x3995f02a87e0 pc=0x559c7cc030e1
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	runtime/proc.go:7134 +0x37
+
+goroutine 6 gp=0x3995f02ec1e0 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x3995f02aa620 sp=0x3995f02aa600 pc=0x559c7cbfbf4a
+runtime.runFinalizers()
+	runtime/mfinal.go:210 +0x107 fp=0x3995f02aa7e0 sp=0x3995f02aa620 pc=0x559c7cba0067
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f02aa7e8 sp=0x3995f02aa7e0 pc=0x559c7cc030e1
+created by runtime.createfing in goroutine 1
+	runtime/mfinal.go:172 +0x3d
+
+goroutine 7 gp=0x3995f02ec3c0 m=nil [cleanup wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	runtime/proc.go:474 +0xca fp=0x3995f02aaf68 sp=0x3995f02aaf48 pc=0x559c7cbfbf4a
+runtime.goparkunlock(...)
+	runtime/proc.go:480
+runtime.(*cleanupQueue).dequeue(0x559c7d3c5f60)
+	runtime/mcleanup.go:522 +0xd3 fp=0x3995f02aafa0 sp=0x3995f02aaf68 pc=0x559c7cb9cd53
+runtime.runCleanups()
+	runtime/mcleanup.go:718 +0x45 fp=0x3995f02aafe0 sp=0x3995f02aafa0 pc=0x559c7cb9d3c5
+runtime.goexit({})
+	runtime/asm_amd64.s:1264 +0x1 fp=0x3995f02aafe8 sp=0x3995f02aafe0 pc=0x559c7cc030e1
+created by runtime.(*cleanupQueue).createGs in goroutine 1
+	runtime/mcleanup.go:672 +0xa5
+
+rax    0xfffffffffffffff2
+rbx    0x26a4
+rcx    0x7f6f1885a105
+rdx    0x26a4
+rdi    0x7ffe890f9f98
+rsi    0x26a4
+rbp    0xffffffff
+rsp    0x7ffe890f9f60
+r8     0x7f6f18819ac0
+r9     0x20
+r10    0x0
+r11    0x202
+r12    0x7ffe890fa5f0
+r13    0x0
+r14    0xfffffffffffffff2
+r15    0x0
+rip    0x7f6f1885a114
+rflags 0x10282
+cs     0x33
+fs     0x0
+gs     0x0
+Error response from daemon: bind-mount /proc/245696/ns/net -> /var/run/docker/netns/a435cb1e9ba1: no such file or directory
+
+Script done on 2026-11-06 00:14:28+09:00 [COMMAND_EXIT_CODE="1"]

@@ -1,0 +1,7 @@
+services:
+  test:
+    build: .
+    init: true
+    ipc: host
+    #security_opt:
+    #  - seccomp=seccomp/docker.json
